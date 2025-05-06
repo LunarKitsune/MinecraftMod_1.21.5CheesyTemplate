@@ -9,12 +9,14 @@ This is modding for minecraft 1.21.5 with forge (55+)
 
 This uses gradle 14 which the gradle-wrapper.properties will specify where that comes from.
 If there is a need to change the gradle version go here: https://services.gradle.org/distributions/
-|
-\____> right click, copy link, and make the value the distribution of the gradle version
+---> right click, copy link, and make the value the distribution of the gradle version
        you want gradle to build into the project
 
 You will also need parchment which will also partly integrate with the mod project
 itself here.
+
+run config is actually the .eclipse config file and eclipse has ownership of making
+their configuration files. 
 
 Necessary parchment info here: https://parchmentmc.org/docs/getting-started
 
