@@ -1,0 +1,31 @@
+package com.mojang.blaze3d.textures;
+
+import com.mojang.blaze3d.DontObfuscate;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
+@OnlyIn(Dist.CLIENT)
+@DontObfuscate
+public enum TextureFormat {
+    RGBA8(4),
+    RED8(1),
+    DEPTH32(4);
+
+    private final int pixelSize;
+
+    private TextureFormat(final int pPixelSize) {
+        this.pixelSize = pPixelSize;
+    }
+
+    public int pixelSize() {
+        return this.pixelSize;
+    }
+
+    public boolean hasColorAspect() {
+        return this == RGBA8 || this == RED8;
+    }
+
+    public boolean hasDepthAspect() {
+        return this == DEPTH32;
+    }
+}
